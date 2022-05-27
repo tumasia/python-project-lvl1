@@ -1,0 +1,10 @@
+name: GitHub Actions
+on: [push]
+jobs:
+  check-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Linter-check
+        run:
+            pip install poetry
+            make lint
